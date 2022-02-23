@@ -57,16 +57,7 @@ const App = (props) => {
   const [formData, setFormData] = useState(initialState)
 
   const onChange = (e) => {
-    /*
-     we can get the name and value like: e.target.name, e.target.value
-    Wwe can also destructure name and value from e.target
-    const name = e.target.name
-    const value = e.target.value
-    */
     const { name, value, type, checked } = e.target
-    /*
-    [variablename] we can make a value stored in a certain variable could be a key for an object, in this case a key for the state
-    */
 
     if (type === 'checkbox') {
       setFormData({
@@ -80,11 +71,6 @@ const App = (props) => {
     }
   }
   const onSubmit = (e) => {
-    /*
-     e.preventDefault()
-     stops the default behavior of form element
-     specifically refreshing of page
-    */
     e.preventDefault()
     const {
       firstName,
